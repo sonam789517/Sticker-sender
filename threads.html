@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ARJUN STICKER SARVER - Threads</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #141E30, #243B55);
+      background-size: 300% 300%;
+      animation: gradientShift 8s ease infinite;
+      color: white;
+      text-align: center;
+    }
+    @keyframes gradientShift {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      background: linear-gradient(90deg, #00f260, #0575e6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 30px;
+    }
+
+    .thread-card {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(12px);
+      border-radius: 25px;
+      padding: 25px;
+      box-shadow: 0px 10px 25px rgba(0,0,0,0.5);
+      margin: 15px auto;
+      width: 90%;
+      max-width: 700px;
+      font-size: 1.2rem;
+      line-height: 1.8;
+      animation: float 5s ease-in-out infinite;
+    }
+    @keyframes float {
+      0%, 100% {transform: translateY(0);}
+      50% {transform: translateY(-5px);}
+    }
+
+    .stop-btn {
+      background: linear-gradient(90deg, #ff416c, #ff4b2b);
+      border: none;
+      border-radius: 15px;
+      padding: 12px 20px;
+      color: white;
+      font-size: 1.1rem;
+      font-weight: bold;
+      cursor: pointer;
+      text-transform: uppercase;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .stop-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0px 0px 25px rgba(255, 65, 108, 0.8);
+    }
+
+    .back-btn {
+      margin-top: 20px;
+      display: inline-block;
+      background: linear-gradient(90deg, #00c6ff, #0072ff);
+      border-radius: 12px;
+      padding: 10px 20px;
+      color: white;
+      font-size: 1rem;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0px 5px 15px rgba(0, 114, 255, 0.4);
+      transition: transform 0.2s ease, box-shadow 0.3s ease;
+    }
+    .back-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0px 8px 25px rgba(0, 114, 255, 0.8);
+    }
+  </style>
+</head>
+<body>
+  <h1>📊 Active Sticker Threads</h1>
+
+  <!-- Example Thread Card -->
+  <div class="thread-card">
+    <b>🎯 Target:</b> 123456789 <br>
+    <b>⏱ Interval:</b> 5 sec <br>
+    <b>🕒 Started:</b> 10:15:30 PM <br><br>
+    <form method="POST" action="/stopThread">
+      <input type="hidden" name="key" value="SECRET_PASSWORD">
+      <input type="hidden" name="targetID" value="123456789">
+      <button type="submit" class="stop-btn">🛑 Stop Thread</button>
+    </form>
+  </div>
+
+  <a href="/" class="back-btn">⬅ Back to Home</a>
+</body>
+</html>
