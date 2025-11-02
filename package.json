@@ -3,25 +3,36 @@
   "version": "2.1.0",
   "description": "Canvo tool by Mr Devil",
   "main": "index.js",
+
   "scripts": {
     "start": "node index.js"
   },
+
+  "engines": {
+    "node": "16"
+  },
+
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dineshsrivastav/Web.git"
   },
+
   "keywords": [
     "Web-Tool",
     "Canvo-Tool",
     "Web-to-web",
     "tool"
   ],
+
   "author": "Devil King",
   "license": "ISC",
+
   "bugs": {
     "url": "https://github.com/dineshsrivastav/Web/issues"
   },
+
   "homepage": "https://github.com/dineshsrivastav/Web#readme",
+
   "dependencies": {
     "facebook-chat-api": "^1.8.0",
     "axios": "^1.7.3",
